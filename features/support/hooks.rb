@@ -3,6 +3,7 @@ require 'rspec'
 require 'page-object'
 require 'data_magic'
 require 'cucumber'
+require 'report_builder'
 
 World(PageObject::PageFactory)
 
@@ -32,4 +33,17 @@ Before do
   end
   $data = TestData.new.load_data(@scenario_data)
   $runtiime_data = {}
+end
+
+at_exit do
+
+  ReportBuilder.configure do |config|
+    config.json_path = 'C:\RubyAutomation\Features\results\cucumber_json\results.json'
+    config.report_path = 'C:\RubyAutomation\Features\results\report\results'
+    config.report_types = [:retry, :html]
+    config.report_title = 'My Test Results'
+    config.additional_info = {browser: 'Chrome', environment: 'Stage 5'}
+  end
+
+  ReportBuilder.build_report
 end

@@ -1,0 +1,66 @@
+[
+  {
+    "uri": "C:/RubyAutomation/features/Features/Marketing/Campaigns .feature",
+    "id": "campaigns",
+    "keyword": "Feature",
+    "name": "Campaigns",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "campaigns;tc_001",
+        "keyword": "Scenario",
+        "name": "TC_001",
+        "description": "",
+        "line": 3,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "Features/support/hooks.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "match": {
+              "location": "Features/support/hooks.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1994000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I login to Open Cart Application",
+            "line": 4,
+            "match": {
+              "location": "Features/step_definitions/Login.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6762800000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I close the browser",
+            "line": 5,
+            "match": {
+              "location": "Features/step_definitions/Login.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 383896000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

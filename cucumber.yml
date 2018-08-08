@@ -1,1 +1,2 @@
-default: --no-source --color --format pretty
+default: --no-source --color --format pretty --format json_pretty --out C:\RubyAutomation\Features\results\cucumber_json\results.json --format html --out C:\RubyAutomation\Features\results\results.html
+
