@@ -3,4 +3,6 @@ require 'page-object'
 require 'data_magic'
 require 'watir'
 
+World(PageObject::PageFactory)
+
 

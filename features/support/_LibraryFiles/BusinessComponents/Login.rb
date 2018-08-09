@@ -7,9 +7,8 @@ module Comp
     @browser = Watir::Browser.new :chrome
     @browser.goto(strUrl)
     puts "Success"
-    @browser.text_field(:id => "username").send_keys "hello"
-    @browser.text_field(:id => "password").send_keys "hello"
-    @browser.button(:id => "Login").click
+    on(SFLoginPage).enterText("wEdit_UserName", strName)
+    on(SFLoginPage).enterText("wEdit_Password", strPass)
   end
 
   def self.Logout
