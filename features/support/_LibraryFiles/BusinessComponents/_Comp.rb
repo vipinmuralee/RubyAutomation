@@ -1,5 +1,3 @@
-require 'watir'
-
 module Comp
   class << self
     include PageObject::PageFactory
