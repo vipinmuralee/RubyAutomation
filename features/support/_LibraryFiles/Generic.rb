@@ -1,7 +1,7 @@
 module Generic
   include PageObject
 
-    def self.enterText(strObj, strVal)
+    def enterText(strObj, strVal)
       self.send  "#{strObj}=", "#{strVal}"
     end
 
